@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <property name="schema" value="FAMILY_TREE"/>
+
+    <property name="now" value="SYSTIMESTAMP" dbms="oracle"/>
+    <property name="uuid" value="SYS_GUID()" dbms="oracle"/>
+    <property name="dbms_type" value="oracle" dbms="oracle"/>
+    <property name="data_ts" value="FT_TS_STMAN_DATA" dbms="oracle"/>
+    <property name="idx_ts" value="FT_TS_STMAN_IDX" dbms="oracle"/>
+    <property name="lob_ts" value="FT_TS_STMAN_LOB" dbms="oracle"/>
+
+    <property name="now" value="NOW()" dbms="postgresql"/>
+    <property name="uuid" value="ext.uuid_generate_v4()" dbms="postgresql"/>
+    <property name="dbms_type" value="postgresql" dbms="postgresql"/>
+    <property name="data_ts" value="FT_TS_STMAN_DATA" dbms="postgresql"/>
+    <property name="idx_ts" value="FT_TS_STMAN_IDX" dbms="postgresql"/>
+    <property name="lob_ts" value="FT_TS_STMAN_LOB" dbms="postgresql"/>
+
+</databaseChangeLog>
