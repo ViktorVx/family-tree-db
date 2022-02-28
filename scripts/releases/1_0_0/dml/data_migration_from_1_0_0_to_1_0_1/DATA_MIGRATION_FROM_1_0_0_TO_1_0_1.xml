@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet runOnChange="true" author="petrov-va" id="DATA_MIGRATION_FROM_1_0_0_to_1_0_1#oracle">
+        <preConditions onFail="CONTINUE">
+            <dbms type="oracle"/>
+        </preConditions>
+        <sqlFile path="/scripts/releases/1_0_0/dml/data_migration_from_1_0_0_to_1_0_1/sql/oracle/DATA_MIGRATION_FROM_1_0_0_TO_1_0_1.sql"
+                 relativeToChangelogFile="false" endDelimiter="/"/>
+        <rollback>
+            <sqlFile path="/scripts/releases/1_0_0/dml/data_migration_from_1_0_0_to_1_0_1/sql/oracle/DATA_MIGRATION_FROM_1_0_0_TO_1_0_1_ROLLBACK.sql"
+                     relativeToChangelogFile="false" endDelimiter="/"/>
+        </rollback>
+    </changeSet>
+    <changeSet runOnChange="true" author="petrov-va" id="DATA_MIGRATION_FROM_1_0_0_to_1_0_1#postgesql">
+        <preConditions onFail="CONTINUE">
+            <dbms type="postgesql"/>
+        </preConditions>
+        <sqlFile path="/scripts/releases/1_0_0/dml/data_migration_from_1_0_0_to_1_0_1/sql/postgresql/DATA_MIGRATION_FROM_1_0_0_TO_1_0_1.sql"
+                 relativeToChangelogFile="false" endDelimiter="/"/>
+        <rollback>
+            <sqlFile path="/scripts/releases/1_0_0/dml/data_migration_from_1_0_0_to_1_0_1/sql/postgresql/DATA_MIGRATION_FROM_1_0_0_TO_1_0_1_ROLLBACK.sql"
+                     relativeToChangelogFile="false" endDelimiter="/"/>
+        </rollback>
+       </changeSet>
+</databaseChangeLog>
