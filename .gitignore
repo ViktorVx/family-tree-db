@@ -1,0 +1,53 @@
+*.java.hsp
+*.sonarj
+*.sw*
+*.versionsBackup*
+*local.properties
+
+
+#activemq
+activemq-data/
+
+bin
+build.sh
+integration-repo
+ivy-cache
+.gradle
+
+# Eclipse
+.classpath
+.project
+.settings
+.springBeans
+
+# IntelliJ
+.idea
+*.iml
+*.ipr
+*.iws
+out
+
+# Mac
+.DS_Store
+
+# Maven
+log
+target
+build
+**/target/
+**/.run/*
+
+.vscode
+*.gitkeep
+node_modules/
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+src/**/*.js
+src/**/*.js.map
+typings
+dist
+.npmignore
