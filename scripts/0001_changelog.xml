@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="properties_block.xml" relativeToChangelogFile="true"/>
+
+    <!--*********************************** RELEASE: 1.0.0 ***********************************-->
+    <!--***** DDL *****-->
+    <!-- NEW TABLES -->
+    <include file="releases/1_0_0/ddl/FT_NAMESPACE.xml" relativeToChangelogFile="true"/>
+    <!-- CHANGES -->
+    <!--***** DML *****-->
+    <include file="releases/1_0_0/dml/data_migration_from_1_0_0_to_1_0_1/DATA_MIGRATION_FROM_1_0_0_TO_1_0_1.xml" relativeToChangelogFile="true"/>
+
+    <!--*********************************** RELEASE: 1.0.1 ***********************************-->
+    <!--***** DDL *****-->
+    <!-- NEW TABLES -->
+    <include file="releases/1_0_1/ddl/FT_import_log/FT_IMPORT_LOG.xml" relativeToChangelogFile="true"/>
+    <!-- CHANGES -->
+    <!--***** DML *****-->
+
+</databaseChangeLog>
