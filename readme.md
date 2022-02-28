@@ -59,10 +59,10 @@ psql -U postgres -h localhost -p 5432
 
 ```shell script
 CREATE DATABASE sm_db;
-CREATE SCHEMA ft_stman1;
-CREATE TABLESPACE ft_ts_stman_data LOCATION '';
-CREATE TABLESPACE ft_ts_stman_idx LOCATION '';
-CREATE TABLESPACE ft_ts_stman_lob LOCATION '';
+CREATE SCHEMA ft_family_tree1;
+CREATE TABLESPACE ft_ts_family_tree_data LOCATION '';
+CREATE TABLESPACE ft_ts_family_tree_idx LOCATION '';
+CREATE TABLESPACE ft_ts_family_tree_lob LOCATION '';
 ```
 
 # Проливка liquibase-скриптов
@@ -72,11 +72,11 @@ CREATE TABLESPACE ft_ts_stman_lob LOCATION '';
 ```shell script
 mvn \
     liquibase:update \
-    -Dliquibase.url=jdbc:postgresql://localhost:5432/ft_sm \
+    -Dliquibase.url=jdbc:postgresql://localhost:5432/family_tree \
     -Dliquibase.username=postgres \
     -Dliquibase.password=postgres \
     -Dliquibase.driver=org.postgresql.Driver \
-    -Dliquibase.changelogSchemaName=ft_SM \
+    -Dliquibase.changelogSchemaName=family_tree \
     -Dliquibase.changeLogFile=$PROJECT_DIR$/scripts/0001_changelog.xml \
-    -Dschema=ft_SM
+    -Dschema=family_tree
 ```
